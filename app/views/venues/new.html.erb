@@ -1,0 +1,23 @@
+
+<h1>Create a Venue</h1>
+
+
+
+<%= form_for Venue.new do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+
+    <%= f.label :state %>
+    <%= f.text_field :state %>
+    
+    <%= f.label :image_link %>
+    <%= f.text_field :image %>
+
+    <%= f.label :family_friendly %>
+    <%= f.check_box :family_friendly %>
+    <%=f.submit%>
+<%end%>
+    

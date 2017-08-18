@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20170817180728) do
   create_table "bands", force: :cascade do |t|
     t.string "name"
     t.string "genre"
-    t.string "string"
+    t.string "image"
     t.boolean "explicit_lyrics"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 20170817180728) do
     t.string "name"
     t.text "date"
     t.boolean "alcohol_served"
+    t.string "image"
+    t.integer "venue_id"
+    t.integer "band_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170817180728) do
     t.string "city"
     t.string "state"
     t.boolean "family_friendly"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

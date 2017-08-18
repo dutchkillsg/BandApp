@@ -7,15 +7,22 @@ class VenuesController < ApplicationController
 		@venues = Venue.find(params[:id])
 		puts @venues.inspect
 	end
-#update works now work on new and create page 
+
 	def update
 		@venues = Venue.find(params[:id])
-		@venues.update_attributes(name: params[:venue][:name], city: params[:venue][:city], state: params[:venue][:state], family_friendly: params[:venue][:family_friendly])
+		@venues.update_attributes(name: params[:venue][:name], city: params[:venue][:city], state: params[:venue][:state], family_friendly: params[:venue][:family_friendly], image: params[:venue][:image])
 		
-		redirect_to action: 'index'
+		redirect_to action: 'show'
 	end
 
 	def show
+		@venue = Venue.find(params[:id])
+
+	end
+
+	def destroy
+		@venues=Venue.find(params[:id])
+		@venues.destroy
 		redirect_to action: 'index'
 	end
 
@@ -24,7 +31,10 @@ class VenuesController < ApplicationController
 	end
 
 	def create
-		@venues = Venue.create(name: params[:name], city: params[:city], state: params[:state], family_friendly: params[:family_friendly])
+		@venues = Venue.create(name: params[:venue][:name], city: params[:venue][:city], state: params[:venue][:state], family_friendly: params[:venue][:family_friendly], image: params[:venue][:image])
+		@venues.save
 		redirect_to action: 'index'
 	end
+
+
 end

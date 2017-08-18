@@ -5,6 +5,7 @@ class CreateVenues < ActiveRecord::Migration[5.1]
       t.string :city
       t.string :state
       t.boolean :family_friendly
+      t.string :image
 
       t.timestamps
     end
