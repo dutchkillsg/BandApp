@@ -7,7 +7,7 @@ class VenuesController < ApplicationController
 		@venues = Venue.find(params[:id])
 		puts @venues.inspect
 	end
-#update works now work on new and create page 
+
 	def update
 		@venues = Venue.find(params[:id])
 		@venues.update_attributes(name: params[:venue][:name], city: params[:venue][:city], state: params[:venue][:state], family_friendly: params[:venue][:family_friendly])
@@ -16,7 +16,8 @@ class VenuesController < ApplicationController
 	end
 
 	def show
-		@venues = Venue.where(params[:id])
+		@venue = Venue.find(params[:id])
+
 	end
 
 	def destroy

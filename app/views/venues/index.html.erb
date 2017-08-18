@@ -7,10 +7,10 @@
 <div class = 'container'>
 	<div class = "row">
 		<div class = "col">
-			<h3>Venue</h3>
+			<h3>Venues</h3>
 			<br>
 			<% @venues.each do |t|%>
-			<li>Name: <%= t.name %></li>
+			<a href="/venues/<%=t.id%>show"><li>Name: <%= t.name %></li></a>
 			<li>City: <%= t.city %></li>
 			<li>State: <%=t.state %></li>
 			<li>Family Friendly: <%=t.family_friendly%></li>
@@ -19,9 +19,6 @@
 			<br>
 			<br>
 			<%end%>
-		</div>
-		<div class = "col">
-			<h1>Create a Venue!</h1>
 		</div>
 	</div>
 </div>
