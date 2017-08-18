@@ -16,6 +16,12 @@ class VenuesController < ApplicationController
 	end
 
 	def show
+		@venues = Venue.where(params[:id])
+	end
+
+	def destroy
+		@venues=Venue.find(params[:id])
+		@venues.destroy
 		redirect_to action: 'index'
 	end
 
@@ -25,12 +31,9 @@ class VenuesController < ApplicationController
 
 	def create
 		@venues = Venue.create(name: params[:venue][:name], city: params[:venue][:city], state: params[:venue][:state], family_friendly: params[:venue][:family_friendly])
+		@venues.save
 		redirect_to action: 'index'
 	end
-	def destroy
-		@venues=Venue.find(params[:id])
-		@venues.destroy
-		redirect_to action: 'index'
-	end
+
 
 end
