@@ -12,7 +12,7 @@ class VenuesController < ApplicationController
 		@venues = Venue.find(params[:id])
 		@venues.update_attributes(name: params[:venue][:name], city: params[:venue][:city], state: params[:venue][:state], family_friendly: params[:venue][:family_friendly], image: params[:venue][:image])
 		
-		redirect_to action: 'index'
+		redirect_to action: 'show'
 	end
 
 	def show
