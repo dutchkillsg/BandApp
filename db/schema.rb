@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20170817180728) do
     t.string "city"
     t.string "state"
     t.boolean "family_friendly"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -10,7 +10,7 @@ class VenuesController < ApplicationController
 
 	def update
 		@venues = Venue.find(params[:id])
-		@venues.update_attributes(name: params[:venue][:name], city: params[:venue][:city], state: params[:venue][:state], family_friendly: params[:venue][:family_friendly])
+		@venues.update_attributes(name: params[:venue][:name], city: params[:venue][:city], state: params[:venue][:state], family_friendly: params[:venue][:family_friendly], image: params[:venue][:image])
 		
 		redirect_to action: 'index'
 	end
@@ -31,7 +31,7 @@ class VenuesController < ApplicationController
 	end
 
 	def create
-		@venues = Venue.create(name: params[:venue][:name], city: params[:venue][:city], state: params[:venue][:state], family_friendly: params[:venue][:family_friendly])
+		@venues = Venue.create(name: params[:venue][:name], city: params[:venue][:city], state: params[:venue][:state], family_friendly: params[:venue][:family_friendly], image: params[:venue][:image])
 		@venues.save
 		redirect_to action: 'index'
 	end
