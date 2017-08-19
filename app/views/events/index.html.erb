@@ -1,4 +1,24 @@
-<% @events.each do |t| %>
-	<%= t.name %>
-	<%= t.date %>
-<%end%>
+
+
+
+
+<div class = 'container editindex'>
+	<h1>These are the Events</h1>
+	<h2>Add/Edit/or even Delete</h2>
+	<h3>Ruin someones day if you would like</h3>
+</div>
+<div class = 'container'>
+	<div class = 'row'>
+		<div class = 'col'>
+			<h3>Events</h3>
+			<br>
+			<% @events.each do |t| %>
+				<li><%= t.name %></h4>
+				<li>Date: <%= t.date %></strong>
+				<li>Alcohol Served: <%= t.alcohol_served %></p>
+				<a href="/events/<%=t.id%>/edit">Edit</a>
+						<%= link_to 'Delete',  t,  method: :delete, data: { confirm: 'Are you sure?' } %>
+			<%end%>
+		</div>
+	</div>
+</div>
