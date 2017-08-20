@@ -10,7 +10,7 @@ class BandsController < ApplicationController
 
 	def update 
 		@bands = Band.find(params[:id])
-		@bands.update_attributes(name: params[:bands][:name], genre: params[:band][:genre], image: params[:image][:image], explicit_lyrics: params[:bands][:explicit_lyrics],)
+		@bands.update_attributes(name: params[:bands][:name], genre: params[:band][:genre], image: params[:band][:image], explicit_lyrics: params[:band][:explicit_lyrics])
 	end
 
 	def show
@@ -28,7 +28,7 @@ class BandsController < ApplicationController
 	end
 
 	def create
-		@bands = Band.create(name: params[:bands][:name], genre: params[:band][:genre], image: params[:image][:image], explicit_lyrics: params[:bands][:explicit_lyrics],)
+		@bands = Band.create(name: params[:band][:name], genre: params[:band][:genre], image: params[:band][:image], explicit_lyrics: params[:band][:explicit_lyrics])
 		@bands.save
 		redirect_to action: 'index'
 	end
