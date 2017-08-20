@@ -11,4 +11,10 @@ Venue.create ({name: 'Jiffy Lube Live', city: "Reston", state: 'Virginia', famil
 
 
 Band.create({name: 'Playboi Carti', genre: 'hip/hop', image: 'http://www.xxlmag.com/files/2017/03/C7Dgac5WcAApax6.jpg', explicit_lyrics: true})
-Event.create({name: 'Meadows',date: '08/26/2017', alcohol_served: true, image: 'https://i.ytimg.com/vi/LH6jRVBykfg/maxresdefault.jpg', venue_id: 2, band_id: 1})
+Band.create({name: 'Linkin Park', genre: 'alternative', image: 'http://www.billboard.com/files/styles/article_main_image/public/media/linkin-park-billboard-650.jpg', explicit_lyrics: true})
+Band.create({name: 'Midnight to Monaco', genre: 'electronic', image: 'http://read-static.tidal.com/wp-content/uploads/2016/08/24143840/MIDNIGHT-FINAL-.jpg', explicit_lyrics: true})
+
+
+Event.create({name: 'Global Citizens',date: '08/15/2017', alcohol_served: true, image: 'https://brightfuture.unilever.us/Images/img_0099---cred.-matthew-makar--535px-_tcm1370-471636_1.jpg', venue_id: 1, band_id: 1})
+Event.create({name: 'Meadows',date: '08/26/2017', alcohol_served: true, image: 'https://i.ytimg.com/vi/LH6jRVBykfg/maxresdefault.jpg', venue_id: 2, band_id: 2})
+Event.create({name: 'Electronic Music Festival',date: '09/06/2017', alcohol_served: true, image: 'http://hildalsolis.org/wp-content/uploads/2015/08/Rave.jpg', venue_id: 3, band_id: 3})

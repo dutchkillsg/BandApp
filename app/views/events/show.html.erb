@@ -1,0 +1,10 @@
+<div id = "row">
+	<div class=  "col eventshow">
+		<h1><%= @event.name %></h1>
+		<h2><%= @event.date %></h2>
+		<img src="<%= @event.image %>">
+		<h3>Alcohol Served: <%= @event.alcohol_served %></h3>
+		<a href = '/venues/<%= @venue.id %>show'> <h4> Venue: <%= @venue.name %></h4></a>
+	</div>
+</div>
+

@@ -1,0 +1,22 @@
+<div class = 'container'>
+    <div class = 'row'>
+        <div class = 'col editband'>
+            <h1>Edit a Band</h1>
+            <%= form_for @bands do |f| %>
+                <li><%= f.label :name %></li>
+                <li><%= f.text_field :name %></li>
+
+                <li><%= f.label :genre %></li>
+                <li><%= f.text_field :genre %></li>
+
+                <li><%= f.label :image_link %></li>
+                <li><%= f.text_field :image %></li>
+
+                <li><%= f.label :explicit_lyrics %></li>
+                <li><%= f.text_field :explicit_lyrics %></li>
+
+            	<li><%=f.submit%></li>
+            <%end%>
+        </div>
+    </div>
+</div>

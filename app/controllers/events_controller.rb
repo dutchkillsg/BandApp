@@ -16,6 +16,13 @@ class EventsController < ApplicationController
 		redirect_to action: 'index'
 	end
 
+	def show 
+		@event = Event.find(params[:id])
+		venue_id = Event.select(:venue_id).find(params[:id])
+		@venue = Venue.find(params[:id])
+
+	end
+
 	def destroy
 		@events=Event.find(params[:id])
 		@events.destroy

@@ -13,7 +13,7 @@
 			<h3>Events</h3>
 			<br>
 			<% @events.each do |t| %>
-				<li><%= t.name %></h4>
+				<a href = '/events/<%=t.id%>show'><li><%= t.name %></h4></a>
 				<li>Date: <%= t.date %></strong>
 				<li>Alcohol Served: <%= t.alcohol_served %></p>
 				<a href="/events/<%=t.id%>/edit">Edit</a>
