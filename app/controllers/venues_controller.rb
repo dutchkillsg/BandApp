@@ -17,7 +17,8 @@ class VenuesController < ApplicationController
 
 	def show
 		@venue = Venue.find(params[:id])
-
+		event_id = Venue.select(:event_id).find(params[:id])
+		@event = Event.find(params[:id])
 	end
 
 	def destroy

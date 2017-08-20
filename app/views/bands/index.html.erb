@@ -11,11 +11,13 @@
 			<h3>Bands</h3>
 			<br>
 			<% @bands.each do |t| %>
-				<a href = '/bands/<%= t.id %>/show'><li><%= t.name %></li></a>
+				<a href = '/bands/<%= t.id %>show'><li><%= t.name %></li></a>
 				<li><%= t.genre %></li>
 				<li>Explicit Lyrics: <%= t.explicit_lyrics %></li>
 				<a href="/bands/<%=t.id%>/edit">Edit</a>
 				<%= link_to 'Delete',  t,  method: :delete, data: { confirm: 'Are you sure?' } %>
+				<br>
+				<br>
 			<%end%>
 		</div>
 	</div>

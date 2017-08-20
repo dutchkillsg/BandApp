@@ -1,0 +1,10 @@
+<div id = "row">
+	<div class=  "col bandshow">
+		<h1><%= @band.name %></h1>
+		<h2><%= @band.genre %></h2>
+		<img src="<%= @band.image %>">
+		<h3>Explicit Lyrics: <%= @band.explicit_lyrics %></h3>
+		<a href = '/events/<%= @event.id %>show'> <h4> Event: <%= @event.name %></h4></a>
+
+	</div>
+</div>

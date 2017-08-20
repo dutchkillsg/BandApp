@@ -23,4 +23,4 @@ Things you may want to cover:
 
 * ...
 
-*work on events controller and pages 
+*try to figure out why when creating new bands/events the ids dont link 
