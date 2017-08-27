@@ -15,6 +15,7 @@ Band.create({name: 'Linkin Park', genre: 'alternative', image: 'http://www.billb
 Band.create({name: 'Midnight to Monaco', genre: 'electronic', image: 'http://read-static.tidal.com/wp-content/uploads/2016/08/24143840/MIDNIGHT-FINAL-.jpg', explicit_lyrics: true})
 
 
-Event.create({name: 'Global Citizens',date: '08/15/2017', alcohol_served: true, image: 'https://brightfuture.unilever.us/Images/img_0099---cred.-matthew-makar--535px-_tcm1370-471636_1.jpg', venue_id: 1, band_id: 1})
-Event.create({name: 'Meadows',date: '08/26/2017', alcohol_served: true, image: 'https://i.ytimg.com/vi/LH6jRVBykfg/maxresdefault.jpg', venue_id: 2, band_id: 2})
-Event.create({name: 'Electronic Music Festival',date: '09/06/2017', alcohol_served: true, image: 'http://hildalsolis.org/wp-content/uploads/2015/08/Rave.jpg', venue_id: 3, band_id: 3})
+Event.create({name: 'Global Citizens',date: 20170805, alcohol_served: true, image: 'https://brightfuture.unilever.us/Images/img_0099---cred.-matthew-makar--535px-_tcm1370-471636_1.jpg', venue_id: 1, band_id: 1})
+Event.create({name: 'Meadows',date: 20171208, alcohol_served: true, image: 'https://i.ytimg.com/vi/LH6jRVBykfg/maxresdefault.jpg', venue_id: 2, band_id: 2})
+Event.create({name: 'Electronic Music Festival',date: 20170609, alcohol_served: true, image: 'http://hildalsolis.org/wp-content/uploads/2015/08/Rave.jpg', venue_id: 3, band_id: 3})
+#fix dates 
