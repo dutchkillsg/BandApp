@@ -23,13 +23,15 @@ ActiveRecord::Schema.define(version: 20170817180728) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
-    t.text "date"
+    t.date "date"
     t.boolean "alcohol_served"
     t.string "image"
     t.integer "venue_id"
     t.integer "band_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["band_id"], name: "index_events_on_band_id"
+    t.index ["venue_id"], name: "index_events_on_venue_id"
   end
 
   create_table "venues", force: :cascade do |t|

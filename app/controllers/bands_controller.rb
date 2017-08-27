@@ -15,8 +15,10 @@ class BandsController < ApplicationController
 
 	def show
 		@band = Band.find(params[:id])
+
 		event_id = Venue.select(:event_id).find(params[:id])
 		@event = Event.find(params[:id])
+		
 	end
 
 	def destroy

@@ -9,5 +9,7 @@
 </div>
 	<div class = 'col venevents'>
 		<h1>Events:</h1>
-		<li><h2><a href = '/events/<%= @event.id %>show'><%= @event.name %></a></h2></li>
+		<% @event.each do |t| %>
+		<li><h2><a href = '/events/<%= t.id %>show'><%= t.name %></a></h2></li>
+		<% end %>
 	</div>

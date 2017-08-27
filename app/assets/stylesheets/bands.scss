@@ -4,10 +4,14 @@
 
 .bandindex{
 	text-align: center;
+	background-color: white;
+	font-family: 'Monoton', cursive;
 }
 
 .bandlist {
-
+	background-color: white;
+	width: 25%;
+	font-family: 'Hammersmith One', sans-serif;
 }
 
 .editband{
@@ -16,4 +20,10 @@
 
 .bandshow{
 	text-align:center;
+	background-color: white;
+}
+
+#bandimage{
+	width: 50%;
+	
 }

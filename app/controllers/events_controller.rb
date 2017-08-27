@@ -1,8 +1,7 @@
 class EventsController < ApplicationController
 	def index 
 		@events = Event.all
-		#should I store my venues in the index to show its values?
-		@venues = Venue.where(params[:id])
+		
 	end
 
 	def edit 
@@ -19,7 +18,7 @@ class EventsController < ApplicationController
 	def show 
 		@event = Event.find(params[:id])
 		venue_id = Event.select(:venue_id).find(params[:id])
-		@venue = Venue.find(params[:id])
+		@venue = @event.venue
 
 	end
 

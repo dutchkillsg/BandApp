@@ -6,19 +6,19 @@
                 <li><%= f.label :name %></li>
                 <li><%= f.text_field :name %></li>
 
-                <li><%= f.label :date %></li>
-                <li><%= f.text_field :date %></li>
+                <li><%= f.label :date %>(yyyymmdd)</li>
+                <li><%= f.text_field :date%></li>
 
 
                 <li><%= f.label :image_link %></li>
                 <li><%= f.text_field :image %></li>
 
                 <li><%= f.label :venue_id %></li>
-                <li><%= f.text_field :venue_id %></li>
+                <li><%= collection_select(:event, :venue_id, Venue.all, :id, :name, :prompt =>true)%></li>
 
                 <li><%= f.label :band_id %></li>
-                <li><%= f.text_field :band_id %></li>
-                
+                <li><%= collection_select(:event, :band_id, Band.all, :id, :name, :prompt =>true)%> </li>
+        
                 
                 <li><%= f.label :Alcohol_Served %><%= f.check_box :alcohol_served %></li>
             	<li><%=f.submit%></li>
